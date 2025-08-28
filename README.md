@@ -63,40 +63,48 @@ IMPRIMIR fatorial
 
 ## 🏗️ Estrutura do Projeto
 
+Desenvolvido no **Eclipse IDE** com a seguinte arquitetura:
+
 ```
-src/
-├── Token.java              # Classe que representa um token
-├── TipoToken.java          # Enum com todos os tipos de tokens
-├── LeitorArquivo.java      # Classe para leitura de arquivos
-├── AnalisadorLexico.java   # Analisador léxico principal
-├── Main.java               # Classe principal para execução
-└── programa.gyh            # Arquivo de exemplo
+AnalisadorLex/
+├── 📁 JRE System Library [JavaSE-21]
+├── 📁 src/
+│   └── 📦 (default package)
+│       ├── 📄 AnalisadorLexico.java    # Analisador léxico principal
+│       ├── 📄 LeitorArquivo.java       # Classe para leitura de arquivos
+│       ├── 📄 Main.java                # Classe principal para execução
+│       ├── 📄 TipoToken.java           # Enum com todos os tipos de tokens
+│       └── 📄 Token.java               # Classe que representa um token
+└── 📄 programa.gyh                     # Arquivo de exemplo
 ```
 
 ## 🚀 Como Executar
 
 ### Pré-requisitos
-- Java JDK 11 ou superior
-- IDE Java (Eclipse, IntelliJ, VSCode) ou terminal
+- Java JDK 21 (ou superior)
+- Eclipse IDE (recomendado) ou qualquer IDE Java
+- Terminal/Prompt de comando
 
 ### Passos
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/analisador-lexico-gyh.git
+git clone https://github.com/DiogoSNs/Analisador-Lexico-GYH.git
 cd analisador-lexico-gyh
 ```
 
-2. Compile os arquivos Java:
+2. **No Eclipse:**
+   - Import → Existing Projects into Workspace
+   - Selecione a pasta do projeto
+   - Run Main.java
+
+3. **Ou via terminal:**
 ```bash
+cd src
 javac *.java
-```
-
-3. Crie um arquivo `programa.gyh` com código na linguagem GYH
-
-4. Execute o analisador:
-```bash
 java Main
 ```
+
+4. Certifique-se de que o arquivo `programa.gyh` está na raiz do projeto
 
 ### Saída Esperada
 ```
@@ -194,11 +202,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para:
 - Adicionar novos recursos
 - Melhorar a documentação
 
-## 📝 Licença
-
-Este projeto é licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
-## 👤 Autor
+## 👤 Autor: Diogo Augusto Silvério Nascimento
 
 Desenvolvido como projeto acadêmico para a disciplina de Compiladores.
 

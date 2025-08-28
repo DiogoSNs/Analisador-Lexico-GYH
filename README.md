@@ -97,6 +97,13 @@ cd analisador-lexico-gyh
    - Selecione a pasta do projeto
    - Run Main.java
 
+2. **No VS Code:**
+
+   - Abra a pasta do projeto no VS Code
+   - Instale a extensão "Java Extension Pack" se ainda não tiver
+   - Abra o arquivo Main.java e clique em Run no canto superior direito
+   - Certifique-se que o arquivo programa.gyh está na raiz do projeto
+
 3. **Ou via terminal:**
 ```bash
 cd src

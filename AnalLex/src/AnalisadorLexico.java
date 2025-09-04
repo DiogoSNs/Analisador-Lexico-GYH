@@ -59,7 +59,7 @@ public class AnalisadorLexico {
         }
 
         // Expressao regular que captura todos os tipos de token
-        String regex = "(\"[^\"]*\"|\\w+|\\d+\\.\\d+|\\d+|:=|<=|>=|==|!=|\\+|\\-|\\*|/|\\[|\\]|\\(|\\)|:|<|>)";
+        String regex = "(\"[^\"]*\"|\\d+\\.\\d+|\\d+|\\w+|:=|<=|>=|==|!=|\\+|\\-|\\*|/|\\[|\\]|\\(|\\)|:|<|>|\\S)";
         Matcher matcher = Pattern.compile(regex).matcher(linha);
 
         while (matcher.find()) {
@@ -86,7 +86,7 @@ public class AnalisadorLexico {
             }
             // Detecta erro: variavel com inicial maiuscula
             else if (lexema.matches("[A-Z][a-zA-Z0-9]*")) {
-                erros.add("Erro Léxico na linha " + numLinha + ": variável inválida \"" + lexema + "\" (deve começar com minúscula)");
+                erros.add("Erro Léxico na linha " + numLinha + ": Desconhecido \"" + lexema + "\"");
             }
             // Numeros inteiros
             else if (lexema.matches("\\d+")) {
@@ -115,7 +115,7 @@ public class AnalisadorLexico {
             else if (lexema.equals(")")) tokens.add(new Token(TipoToken.FechaPar, lexema));
             // Se chegou ate aqui, e um token desconhecido
             else {
-                erros.add("Erro Léxico na linha " + numLinha + ": desconhecido \"" + lexema + "\"");
+                erros.add("Erro Léxico na linha " + numLinha + ": Desconhecido \"" + lexema + "\"");
             }
         }
     }

@@ -8,7 +8,7 @@ public class Main {
             System.out.println("     COMPILADOR DA LINGUAGEM GYH");
             System.out.println("===============================================\n");
             
-            AnalisadorLexico lex = new AnalisadorLexico("Analisador-Lexico-GYH/programa.gyh");
+            AnalisadorLexico lex = new AnalisadorLexico("Compilador-Linguagem-GYH/programa.gyh");
 
             System.out.println("=== TOKENS ENCONTRADOS ===");
             for (Token t : lex.getTokens()) {

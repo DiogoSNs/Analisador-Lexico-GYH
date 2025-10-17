@@ -1,16 +1,9 @@
+# Programa correto para comparação
 [DECLARAR]
-parametro:INTEGER
-fatorial:INTEGER
+x: INTEGER
+y: INTEGER
 
 [PROGRAMA]
-# Calcula o fatorial de um número inteiro
-LER Parametro
-fatorial := parametro
-SE parametro == 0 ENTAO fatorial := 1
-ENQTO parametro > 1
-INICIO
-fatorial := fatorial * (parametro - 1) 
-parametro := parametro - 1
-FINAL
-IMPRIMIR fatorial
-
+x := 10
+y := 20
+SE x < y ENTAO IMPRIMIR "x eh menor"

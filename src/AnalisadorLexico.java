@@ -3,7 +3,7 @@ import java.util.*;
 import java.util.regex.*;
 
 /**
- * Analisador Léxico - Scanner/Lexer da linguagem GYH
+ * Analisador Léxico da linguagem GYH
  * 
  * Responsável pela primeira fase da compilação: análise léxica
  * Lê o código fonte e o transforma em uma sequência de tokens

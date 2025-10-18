@@ -12,9 +12,9 @@ LER parametro
 fatorial := parametro 
 SE parametro != 0 OU parametro < == 0 ENTAO fatorial := 1
 ENQTO parametro > 1
-INI
+INICIO
 fatorial := fatorial * (parametro - 1) 
 parametro := parametro - 12.456
-FIM
+FINAL
 IMPRIMIR fatorial
 IMPRIMIR "Oi"
